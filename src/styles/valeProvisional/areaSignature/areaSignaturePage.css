@@ -1,0 +1,335 @@
+/* areaSignaturePage.css - Diseño oscuro con modal borroso */
+
+.area-signature-page-container {
+  padding: 20px;
+  background: #1A202C;
+  min-height: 100vh;
+  color: #E2E8F0;
+}
+
+/* Header */
+.area-signature-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #4A5568;
+}
+
+.area-signature-page-title-section {
+  flex: 1;
+}
+
+.area-signature-page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F7FAFC;
+  margin: 0 0 8px 0;
+}
+
+.area-signature-page-subtitle {
+  font-size: 16px;
+  color: #A0AEC0;
+  margin: 0;
+}
+
+.area-signature-page-create-btn {
+  background: #4299E1;
+  color: #F7FAFC;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.area-signature-page-create-btn:hover {
+  background: #3182CE;
+  transform: translateY(-1px);
+}
+
+/* Sección de formulario */
+.area-signature-form-section {
+  background: #2D3748;
+  border-radius: 8px;
+  border: 1px solid #4A5568;
+  padding: 0;
+  overflow: hidden;
+}
+
+.area-signature-form-header {
+  padding: 20px 24px 0;
+  margin-bottom: 0;
+}
+
+.area-signature-form-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #F7FAFC;
+  margin: 0;
+}
+
+/* Sección de lista */
+.area-signature-list-section {
+  background: #2D3748;
+  border-radius: 8px;
+  border: 1px solid #4A5568;
+  overflow: hidden;
+}
+
+/* Modal Overlay con fondo borroso */
+.area-signature-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 32, 44, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.area-signature-modal-content {
+  background: #2D3748;
+  border-radius: 12px;
+  border: 1px solid #4A5568;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: area-signature-modal-appear 0.3s ease-out;
+}
+
+@keyframes area-signature-modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Modal Header */
+.area-signature-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0;
+  margin-bottom: 20px;
+}
+
+.area-signature-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #F7FAFC;
+  margin: 0;
+}
+
+.area-signature-modal-close {
+  background: none;
+  border: none;
+  color: #A0AEC0;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area-signature-modal-close:hover {
+  background: #4A5568;
+  color: #F7FAFC;
+}
+
+/* Modal Body */
+.area-signature-modal-body {
+  padding: 0 24px;
+}
+
+.area-signature-detail-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.area-signature-detail-label {
+  font-weight: 600;
+  color: #CBD5E0;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.area-signature-detail-value {
+  color: #F7FAFC;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.area-signature-detail-url {
+  margin-top: 4px;
+}
+
+.area-signature-url-link {
+  color: #63B3ED;
+  text-decoration: none;
+  font-size: 14px;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+
+.area-signature-url-link:hover {
+  color: #90CDF4;
+  text-decoration: underline;
+}
+
+.area-signature-detail-status {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  width: fit-content;
+}
+
+.area-signature-status-active {
+  background: rgba(72, 187, 120, 0.2);
+  color: #9AE6B4;
+  border: 1px solid #48BB78;
+}
+
+.area-signature-status-inactive {
+  background: rgba(245, 101, 101, 0.2);
+  color: #FEB2B2;
+  border: 1px solid #F56565;
+}
+
+/* Modal Footer */
+.area-signature-modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 20px 24px 24px;
+  border-top: 1px solid #4A5568;
+  margin-top: 8px;
+}
+
+.area-signature-modal-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+.area-signature-modal-btn-cancel {
+  background: #718096;
+  color: #F7FAFC;
+}
+
+.area-signature-modal-btn-cancel:hover {
+  background: #4A5568;
+}
+
+.area-signature-modal-btn-primary {
+  background: #4299E1;
+  color: #F7FAFC;
+}
+
+.area-signature-modal-btn-primary:hover {
+  background: #3182CE;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .area-signature-page-container {
+    padding: 16px;
+  }
+
+  .area-signature-page-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .area-signature-page-create-btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .area-signature-modal-overlay {
+    padding: 16px;
+  }
+
+  .area-signature-modal-content {
+    max-width: 100%;
+  }
+
+  .area-signature-modal-header,
+  .area-signature-modal-body,
+  .area-signature-modal-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .area-signature-modal-footer {
+    flex-direction: column;
+  }
+
+  .area-signature-modal-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .area-signature-page-title {
+    font-size: 24px;
+  }
+
+  .area-signature-page-subtitle {
+    font-size: 14px;
+  }
+
+  .area-signature-modal-title {
+    font-size: 18px;
+  }
+}
+
+/* Scrollbar personalizado para el modal */
+.area-signature-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.area-signature-modal-content::-webkit-scrollbar-track {
+  background: #2D3748;
+  border-radius: 3px;
+}
+
+.area-signature-modal-content::-webkit-scrollbar-thumb {
+  background: #4A5568;
+  border-radius: 3px;
+}
+
+.area-signature-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}

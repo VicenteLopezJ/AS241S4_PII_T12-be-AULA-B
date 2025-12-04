@@ -1,0 +1,148 @@
+.stats-card {
+ background: linear-gradient(135deg, #b4a6a6 0%, #FFF5CC 100%);
+
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #290722;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 400px;
+  height: 120px;
+  margin-left: 30px;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.stats-content {
+  position: relative;
+  z-index: 2;
+  
+}
+
+.stats-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats-icon {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.stats-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.stats-title {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* VERDE - Primera tarjeta */
+.stats-primary {
+  background: linear-gradient(135deg, #FFFFFF 0%, #D3FCD2 100%);
+  color: white;
+}
+
+.stats-primary .stats-value,
+.stats-primary .stats-title,
+.stats-primary .stats-icon {
+  color: #44ae42 ;
+}
+
+/* MORADO - Segunda tarjeta */
+.stats-success {
+  background: linear-gradient(135deg, #FFFFFF 0%, #C9FDF5 100%);
+  color: white;
+}
+
+.stats-success .stats-value,
+.stats-success .stats-title,
+.stats-success .stats-icon {
+  color: #31aa98 ;
+}
+
+/* ROJO - Tercera tarjeta */
+.stats-warning {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF5CC 100%);
+  color: white;
+}
+
+.stats-warning .stats-value,
+.stats-warning .stats-title,
+.stats-warning .stats-icon {
+  color: #d1b649;
+}
+
+/* Elemento decorativo */
+.stats-decoration {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.638);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Estado de carga */
+.stats-loading {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-skeleton {
+  height: 40px;
+  width: 60%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.stats-skeleton-title {
+  height: 16px;
+  width: 40%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-card {
+    padding: 20px;
+  }
+  
+  .stats-value {
+    font-size: 2rem;
+  }
+  
+  .stats-main {
+    gap: 8px;
+  }
+}

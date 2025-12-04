@@ -1,0 +1,145 @@
+/* === CONTENEDOR GENERAL === */
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  background-color: #1e1e2f; /* ← MISMO FONDO QUE INVENTARIO */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === BUSCADOR === */
+.dashboard-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-search input {
+  width: 60%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  outline: none;
+  background-color: #2c2c3c; /* ← MISMO INPUT QUE INVENTARIO */
+  border: 1px solid #444;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.dashboard-search input:focus {
+  border-color: #888;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+}
+
+/* === TARJETAS === */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 14px;
+  background-color: #2c2c3c; /* ← TARJETAS IGUALADAS */
+  border: 1px solid #444;
+  text-align: center;
+  transition: 0.2s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.12);
+}
+
+/* ICONOS — colores suaves se mantienen */
+.card .icon {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.card-blue .icon {
+  color: #4aa8ff;
+}
+.card-purple .icon {
+  color: #c07bff;
+}
+.card-green .icon {
+  color: #63d488;
+}
+
+/* Texto dentro de la tarjeta */
+.card h3 {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.card p {
+  font-size: 28px;
+  margin-top: 6px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* === LISTA DE NOTIFICACIONES === */
+.notificaciones-lista {
+  background-color: #2c2c3c; /* ← CONTENEDOR */
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #444;
+}
+
+.notificacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #33334d; /* ← FILAS */
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #444;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.notificacion:hover {
+  background-color: #3d3d57; /* ← HOVER IGUALADO */
+}
+
+/* ESTADOS */
+.notificacion.pendiente {
+  border-left: 4px solid #facc15; /* amarillo suave */
+}
+
+.notificacion.aceptada {
+  border-left: 4px solid #22c55e; /* verde suave */
+}
+
+/* BOTONES DE ESTADO */
+.estado-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Tonos iguales al inventario */
+.estado-btn.pendiente {
+  background-color: #facc15;
+  color: #000;
+}
+
+.estado-btn.aceptada {
+  background-color: #22c55e;
+  color: #000;
+}
+
+.estado-btn:hover {
+  opacity: 0.8;
+}

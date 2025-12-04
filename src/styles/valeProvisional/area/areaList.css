@@ -1,0 +1,301 @@
+/* Vale Provisional - Area List Component Styles */
+
+.vale-provisional-area-table-container {
+  overflow-x: auto;
+  width: 100%;
+  border-radius: 8px;
+  background: #2D3748;
+  border: 1px solid #4A5568;
+}
+
+.vale-provisional-area-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2D3748;
+  color: #E2E8F0;
+}
+
+.vale-provisional-area-table-header {
+  background-color: #1A202C;
+  color: #CBD5E0;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #4299E1;
+}
+
+.vale-provisional-area-table-header-actions {
+  text-align: center;
+}
+
+.vale-provisional-area-table-row {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #4A5568;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.vale-provisional-area-table-row:hover {
+  background-color: #4A5568;
+}
+
+.vale-provisional-area-table-cell {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #4A5568;
+}
+
+.vale-provisional-area-code-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vale-provisional-area-code-badge {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #4299E1;
+  color: #F7FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.3);
+}
+
+.vale-provisional-area-code-text {
+  font-weight: 600;
+  color: #CBD5E0;
+}
+
+.vale-provisional-area-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.vale-provisional-area-name {
+  font-weight: 600;
+  color: #F7FAFC;
+}
+
+.vale-provisional-area-type-badge {
+  background-color: rgba(66, 153, 225, 0.2);
+  color: #90CDF4;
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid #4299E1;
+  box-shadow: 0 1px 2px rgba(66, 153, 225, 0.1);
+}
+
+/* Estilos para el estado */
+.vale-provisional-area-status-badge {
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.vale-provisional-area-status-active {
+  background-color: rgba(72, 187, 120, 0.2);
+  color: #9AE6B4;
+  border-color: #48BB78;
+}
+
+.vale-provisional-area-status-inactive {
+  background-color: rgba(245, 101, 101, 0.2);
+  color: #FEB2B2;
+  border-color: #F56565;
+}
+
+.vale-provisional-area-actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.vale-provisional-area-action-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(74, 85, 104, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #CBD5E0;
+}
+
+.vale-provisional-area-action-btn:focus {
+  outline: 2px solid #4299E1;
+  outline-offset: 2px;
+}
+
+.vale-provisional-area-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.vale-provisional-area-action-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.vale-provisional-area-edit-btn {
+  color: #63B3ED;
+}
+
+.vale-provisional-area-edit-btn:not(:disabled):hover {
+  background-color: rgba(99, 179, 237, 0.2);
+  color: #90CDF4;
+}
+
+.vale-provisional-area-delete-btn {
+  color: #FC8181;
+}
+
+.vale-provisional-area-delete-btn:hover {
+  background-color: rgba(252, 129, 129, 0.2);
+  color: #FEB2B2;
+}
+
+.vale-provisional-area-restore-btn {
+  color: #68D391;
+}
+
+.vale-provisional-area-restore-btn:hover {
+  background-color: rgba(104, 211, 145, 0.2);
+  color: #9AE6B4;
+}
+
+.vale-provisional-area-empty-state {
+  text-align: center;
+  padding: 3rem 0;
+  color: #A0AEC0;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #2D3748;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #4A5568;
+}
+
+/* Estados de carga (mantenidas las clases originales si se necesitan) */
+.vale-provisional-area-loading-row {
+  opacity: 0.6;
+  pointer-events: none;
+  background-color: #4A5568 !important;
+}
+
+.vale-provisional-area-loading-row .vale-provisional-area-action-btn {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vale-provisional-area-table-container {
+    font-size: 0.875rem;
+    border-radius: 6px;
+  }
+  
+  .vale-provisional-area-table-cell {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .vale-provisional-area-actions-container {
+    gap: 0.25rem;
+  }
+  
+  .vale-provisional-area-action-btn {
+    padding: 0.375rem;
+  }
+  
+  .vale-provisional-area-code-badge {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Scrollbar personalizado para navegadores WebKit */
+.vale-provisional-area-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.vale-provisional-area-table-container::-webkit-scrollbar-track {
+  background: #2D3748;
+  border-radius: 4px;
+}
+
+.vale-provisional-area-table-container::-webkit-scrollbar-thumb {
+  background: #4A5568;
+  border-radius: 4px;
+}
+
+.vale-provisional-area-table-container::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* Mejoras visuales adicionales */
+.vale-provisional-area-table-header:first-child {
+  border-top-left-radius: 8px;
+}
+
+.vale-provisional-area-table-header:last-child {
+  border-top-right-radius: 8px;
+}
+
+.vale-provisional-area-table-row:last-child .vale-provisional-area-table-cell {
+  border-bottom: none;
+}
+
+/* Estados de hover para las filas */
+.vale-provisional-area-table-row:nth-child(even) {
+  background-color: #2D3748;
+}
+
+.vale-provisional-area-table-row:nth-child(even):hover {
+  background-color: #4A5568;
+}
+
+.vale-provisional-area-table-row:nth-child(odd) {
+  background-color: #2D3748;
+}
+
+.vale-provisional-area-table-row:nth-child(odd):hover {
+  background-color: #4A5568;
+}

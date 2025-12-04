@@ -1,0 +1,836 @@
+/* src/styles/asistencia/student/asistencia/attendanceStyles.css */
+
+
+.attendance-dashboard {
+    background-color: #1f2937;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8fafc;
+    min-height: 100vh;
+    box-sizing: border-box; 
+}
+
+.header-greeting-box,
+.filters-container,
+.attendance-detail-section,
+.legend-block,
+.summary-section {
+    background-color: #cbd5e1;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    color: #0f172a;
+    border: none;
+}
+
+.alerts-container {
+    padding: 0;
+    background-color: transparent;
+    margin-bottom: 0.5rem; 
+}
+.status-message, .justification-reminder {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   HEADER GREETING
+   ============================================ */
+.header-greeting-box {
+    border-left: none;
+}
+.header-greeting-box h1 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+.header-greeting-box p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #1e293b;
+    font-weight: 600;
+}
+.header-greeting-box strong {
+    color: #16a34a;
+    font-weight: 800;
+}
+.update-message {
+    background-color: #94a3b8;
+    color: #0f172a;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border: 2px solid #64748b;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.text-desaprobado {
+    font-weight: 800;
+    color: #dc2626;
+}
+.calculation-info {
+    margin-top: 0.5rem;
+}
+.calculation-info p {
+    color: #334155;
+    font-weight: 600;
+}
+
+/* ============================================
+   ALERT BOXES - ESTADOS CORREGIDOS
+   🔥 ÓPTIMO: Verde | ALERTA: Amarillo | CRÍTICO: Rojo
+   ============================================ */
+.alerts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.alert-box {
+    flex: 1 1 0; 
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    transform: scale(0.97);
+    height: 7rem;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: space-around;
+}
+
+.alert-box.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 🟢 ÓPTIMO - Verde (≥85%) */
+.alert-box.optimo { 
+    background: #dcfce7;
+    color: #15803d;
+    border-color: #16a34a;
+}
+
+.alert-box.optimo.active {
+    background: #16a34a;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+    transform: scale(1.05);
+}
+
+/* 🟡 ALERTA - Amarillo (70-84%) */
+.alert-box.alerta { 
+    background: #fef3c7;
+    color: #a16207;
+    border-color: #ca8a04;
+}
+
+.alert-box.alerta.active {
+    background: #ca8a04;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(202, 138, 4, 0.4);
+    transform: scale(1.05);
+}
+
+/* 🔴 CRÍTICO - Rojo (<70%) */
+.alert-box.desaprobado,
+.alert-box.critico { 
+    background: #fee2e2;
+    color: #7f1d1d;
+    border-color: #dc2626;
+}
+
+.alert-box.desaprobado.active,
+.alert-box.critico.active {
+    background: #dc2626;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    transform: scale(1.05);
+}
+
+.alert-icon { 
+    font-size: 1.5rem;
+    display: block; 
+    margin-bottom: 0.25rem;
+    font-weight: 800;
+}
+
+.alert-title { 
+    font-weight: 800; 
+    font-size: 0.875rem; 
+    margin: 0;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+}
+
+.alert-range { 
+    font-size: 0.75rem; 
+    opacity: 0.8; 
+    font-weight: 600;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   STATUS MESSAGES - COLORES CORREGIDOS
+   ============================================ */
+.status-message {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    margin-top: 0;
+    color: #ffffff; 
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid;
+}
+
+/* 🟢 ÓPTIMO - Verde */
+.status-message.optimo {
+    background: #16a34a;
+    color: #ffffff;
+    border-color: #15803d;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+}
+
+/* 🟡 ALERTA - Amarillo */
+.status-message.alerta {
+    background: #ca8a04;
+    color: #ffffff;
+    border-color: #a16207;
+    box-shadow: 0 4px 12px rgba(202, 138, 4, 0.4);
+}
+
+/* 🔴 CRÍTICO - Rojo */
+.status-message.desaprobado,
+.status-message.critico {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #b91c1c;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.message-icon {
+    font-size: 1.5em;
+    margin-right: 0.75rem;
+    font-weight: 800;
+}
+
+/* ============================================
+   JUSTIFICATION REMINDER
+   ============================================ */
+.justification-reminder {
+    background: #ea580c;
+    color: #ffffff; 
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1.25rem;
+    font-weight: 800;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.reminder-icon {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+/* ============================================
+   🔥 FILTERS - CORRECCIÓN FINAL: SIN RAYITO
+   ============================================ */
+.filters-container {
+    background-color: #cbd5e1;
+    color: #0f172a;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.filter-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    letter-spacing: -0.01em;
+}
+
+/* 🔥 Alineación perfecta - todos al final */
+.filter-controls {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.filter-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🔥 Labels sin altura extra */
+.filter-group label {
+    display: block;
+    font-size: 0.75rem;
+    color: #334155;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* 🔥 Altura fija para TODOS los botones */
+.filter-button,
+.filter-group select {
+    background-color: #64748b;
+    color: #ffffff;
+    border: 2px solid #475569;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 800;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.filter-button:hover,
+.filter-group select:hover {
+    background-color: #475569;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Course Dropdown */
+.course-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #64748b;
+    border: 2px solid #475569;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    min-width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.course-dropdown > div {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    font-weight: 600;
+}
+
+.course-dropdown > div:hover {
+    background-color: #475569;
+}
+
+/* ============================================
+   ATTENDANCE TABLE
+   ============================================ */
+.attendance-detail-section {
+    padding-top: 1rem;
+    background-color: #cbd5e1;
+}
+.attendance-detail-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.375rem;
+    color: #0f172a;
+    font-weight: 800;
+    border-bottom: 2px solid #94a3b8;
+    padding-bottom: 0.75rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    letter-spacing: -0.01em;
+}
+.attendance-table-wrapper {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+}
+.attendance-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.875rem;
+}
+.attendance-table th,
+.attendance-table td {
+    padding: 0.875rem 0.75rem;
+    text-align: center;
+    border-bottom: 2px solid #94a3b8;
+}
+.attendance-table tbody tr {
+    background-color: #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+.attendance-table tbody tr:hover {
+    background-color: #cbd5e1;
+}
+.attendance-table th {
+    background-color: #64748b;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.attendance-table td {
+    color: #0f172a;
+    font-weight: 600;
+}
+.course-name-small {
+    display: block;
+    font-size: 0.75rem;
+    color: #1e293b;
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
+.semester-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    color: #ffffff;
+    background-color: #64748b;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-top: 0.25rem;
+    font-weight: 800;
+}
+
+/* Colores de columnas */
+.attendance-table tbody tr td:nth-child(2) { 
+    color: #16a34a;
+    font-weight: 800;
+} 
+.attendance-table tbody tr td:nth-child(3) { 
+    color: #dc2626;
+    font-weight: 800;
+} 
+.attendance-table tbody tr td:nth-child(4) { 
+    color: #ca8a04;
+    font-weight: 800;
+}
+.attendance-table tbody tr td:nth-child(5) { 
+    color: #2563eb;
+    font-weight: 800;
+}
+.attendance-table tbody tr td:nth-child(6) { 
+    color: #7c3aed;
+    font-weight: 800;
+}
+
+/* ============================================
+   STATUS BADGES - COLORES CORREGIDOS
+   ============================================ */
+.status-badge {
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-align: center;
+    display: inline-block;
+    min-width: 70px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 🟢 ÓPTIMO - Verde */
+.status-badge.optimo {
+    background: #16a34a;
+    color: #ffffff;
+    border: 2px solid #15803d;
+}
+
+/* 🟡 ALERTA - Amarillo */
+.status-badge.alerta {
+    background: #ca8a04;
+    color: #ffffff;
+    border: 2px solid #a16207;
+}
+
+/* 🔴 CRÍTICO - Rojo */
+.status-badge.critico,
+.status-badge.crítico {
+    background: #dc2626;
+    color: #ffffff;
+    border: 2px solid #b91c1c;
+}
+
+.alert-value {
+    font-weight: 800;
+    color: #ea580c;
+}
+
+/* No Data Message */
+.no-data-message {
+    text-align: center;
+    padding: 2rem;
+    color: #334155;
+}
+.no-data-message p {
+    margin: 0.5rem 0;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* ============================================
+   LEGENDS - COLORES CORREGIDOS
+   ============================================ */
+.legends-container {
+    background-color: #cbd5e1;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex; 
+    gap: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.legend-block {
+    flex: 1;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+.legend-block h3 {
+    margin-top: 0;
+    font-size: 1.375rem;
+    color: #0f172a;
+    margin-bottom: 0.875rem;
+    font-weight: 800;
+    border-bottom: 2px solid #94a3b8;
+    padding-bottom: 0.75rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    letter-spacing: -0.01em;
+}
+.legend-block ul {
+    list-style: none;
+    padding: 0;
+}
+.legend-block li {
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.legend-key {
+    font-weight: 800;
+    margin-right: 0.625rem;
+    font-size: 1rem;
+    min-width: 24px;
+}
+
+.column-legend ul li:nth-child(1) .legend-key { color: #16a34a; }
+.column-legend ul li:nth-child(2) .legend-key { color: #dc2626; }
+.column-legend ul li:nth-child(3) .legend-key { color: #ca8a04; }
+.column-legend ul li:nth-child(4) .legend-key { color: #2563eb; }
+.column-legend ul li:nth-child(5) .legend-key { color: #7c3aed; }
+
+.status-legend span { 
+    font-weight: 800;
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+    margin-right: 0.625rem;
+    font-size: 0.75rem;
+    display: inline-block;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 🟢 ÓPTIMO - Verde */
+.status-legend .status-optimokey span { 
+    background: #16a34a;
+    color: #ffffff;
+    border: 2px solid #15803d;
+}
+
+/* 🟡 ALERTA - Amarillo */
+.status-legend .status-alertakey span { 
+    background: #ca8a04;
+    color: #ffffff;
+    border: 2px solid #a16207;
+}
+
+/* 🔴 CRÍTICO - Rojo */
+.status-legend .status-criticokey span { 
+    background: #dc2626;
+    color: #ffffff;
+    border: 2px solid #b91c1c;
+}
+
+/* ============================================
+   SUMMARY SECTION
+   ============================================ */
+.summary-section {
+    background-color: #cbd5e1;
+    margin-top: 0;
+    padding: 1.5rem;
+}
+.summary-section h3 {
+    margin-top: 0;
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    letter-spacing: -0.01em;
+}
+.summary-subtitle {
+    font-size: 0.875rem;
+    color: #334155;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.summary-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.summary-card {
+    background-color: #64748b;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 7rem;
+    transition: all 0.3s ease;
+    border: 2px solid #475569;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.summary-card.highlight {
+    background: #2563eb;
+    font-weight: 800;
+    color: white;
+    border: 2px solid #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+.summary-card.highlight:hover {
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.5);
+}
+.summary-value {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+}
+.summary-card.highlight .summary-value {
+    color: #ffffff;
+}
+.summary-title {
+    font-size: 0.875rem;
+    color: #e2e8f0;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.01em;
+}
+.summary-card.highlight .summary-title {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+/* ============================================
+   CONNECTION STATUS
+   ============================================ */
+.connection-status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.status-dot.online {
+    background-color: #16a34a;
+    box-shadow: 0 0 8px #16a34a;
+}
+.status-text {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* ============================================
+   LOADING & ERROR STATES
+   ============================================ */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: #cbd5e1;
+}
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #64748b;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: #cbd5e1;
+}
+.error-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.error-state h2 {
+    color: #dc2626;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+.retry-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 2px solid #1d4ed8;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.retry-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVIDAD
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .alerts-container {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .alert-box {
+        flex: 1 1 calc(50% - 0.5rem); 
+        max-width: calc(50% - 0.5rem);
+        margin-bottom: 1rem;
+        height: auto; 
+    }
+
+    .summary-cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+    .summary-card {
+        padding: 1rem;
+        min-height: 6rem;
+    }
+    .summary-value {
+        font-size: 2rem; 
+    }
+    
+    .legends-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .attendance-dashboard {
+        padding: 15px;
+    }
+    
+    .alerts-container,
+    .legends-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-button,
+    .filter-group select {
+        width: 100%;
+    }
+    
+    .alert-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 0.5rem; 
+    }
+    
+    .summary-cards-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .attendance-detail-section {
+         padding-left: 0.5rem;
+         padding-right: 0.5rem;
+         margin-bottom: 0;
+    }
+    .attendance-table-wrapper {
+        border-radius: 0;
+    }
+    .attendance-table th,
+    .attendance-table td {
+        padding: 0.875rem 0.6rem; 
+    }
+}

@@ -1,0 +1,262 @@
+/* src/styles/asistencia/student/alert/AlertsStyles.css */
+
+/* ========== ESTILOS BASE ========== */
+.alertas-page {
+    background-color: #1f2937;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== TARJETAS DE MÉTRICA (Header Cards) ========== */
+
+/* 1. Críticas (Rojo Intenso) */
+.card-criticas {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    border: 2px solid #ef4444;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    transition: all 0.3s ease;
+}
+
+.card-criticas:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.5);
+}
+
+.text-criticas {
+    color: #fecaca;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 2. Advertencias (Amarillo/Dorado) */
+.card-advertencias {
+    background: linear-gradient(135deg, #ca8a04 0%, #a16207 100%);
+    border: 2px solid #eab308;
+    box-shadow: 0 4px 12px rgba(202, 138, 4, 0.4);
+    transition: all 0.3s ease;
+}
+
+.card-advertencias:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(202, 138, 4, 0.5);
+}
+
+.text-advertencias {
+    color: #fef3c7;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Notificaciones (Verde Profesional) */
+.card-notificaciones {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border: 2px solid #22c55e;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+    transition: all 0.3s ease;
+}
+
+.card-notificaciones:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.5);
+}
+
+.text-notificaciones {
+    color: #d1fae5;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== ESTILOS PARA INSIGNIAS (Badges) ========== */
+.badge-critico {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: 2px solid #ef4444;
+    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.badge-alerta {
+    background-color: #ca8a04;
+    color: #ffffff;
+    border: 2px solid #eab308;
+    box-shadow: 0 2px 4px rgba(202, 138, 4, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+/* ========== TARJETAS DE ALERTA (Alert Cards) ========== */
+.alert-card-container {
+    background-color: #cbd5e1;
+    border: 2px solid #94a3b8;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.alert-card-container:hover {
+    border-color: #64748b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ========== TÍTULOS Y TEXTOS ========== */
+.section-title-alerts {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #f8fafc;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.card-title-alerts {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    letter-spacing: -0.01em;
+}
+
+.card-description-alerts {
+    font-size: 1rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* ========== DETALLES DE ASISTENCIA ========== */
+.detail-box {
+    background-color: #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.detail-box-title {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.detail-box-subtitle {
+    font-size: 0.75rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* ========== BOTONES ========== */
+.btn-action-alerts {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    font-weight: 800;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.01em;
+}
+
+.btn-action-alerts:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+/* ========== RECOMENDACIONES ========== */
+.recommendations-container {
+    background-color: #cbd5e1;
+    border: 2px solid #94a3b8;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-item {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    border: 2px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.recommendation-item:hover {
+    border-color: #94a3b8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-title {
+    font-weight: 800;
+    color: #0f172a;
+    font-size: 1rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.recommendation-desc {
+    font-size: 0.875rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* ========== ESTADOS ESPECIALES ========== */
+.no-alerts-container {
+    background-color: #cbd5e1;
+    border: 2px solid #16a34a;
+    border-radius: 0.75rem;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
+}
+
+.loading-container {
+    background-color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.error-container {
+    background-color: #fee2e2;
+    border: 2px solid #dc2626;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 768px) {
+    .alertas-page {
+        padding: 1rem;
+    }
+    
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title-alerts {
+        font-size: 1.25rem;
+    }
+    
+    .card-title-alerts {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .alertas-page {
+        padding: 0.75rem;
+    }
+    
+    .btn-action-alerts {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}

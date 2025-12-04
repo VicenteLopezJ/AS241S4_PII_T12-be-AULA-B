@@ -1,0 +1,49 @@
+/* src/styles/asistencia/student/justificacion/Justificacion.css */
+
+.justificaciones-page {
+    
+    background-color: #0f172a; 
+    min-height: 100vh;
+    padding: 2rem;
+    color: #f8fafc; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.badge-pendiente {
+    background-color: #fcd34d; 
+    color: #b45309; 
+    border: 1px solid #fde68a;
+}
+.badge-aprobado {
+    background-color: #10b981; 
+    color: #ecfdf5; 
+    border: 1px solid #34d399;
+}
+.badge-rechazada {
+    background-color: #f87171;
+    color: #7f1d1d; 
+    border: 1px solid #fecaca;
+}
+.badge-fuera-plazo {
+    background-color: #374151; 
+    color: #f8fafc; 
+    border: 1px solid #4b5563;
+}
+
+
+@media (max-width: 768px) {
+    .justificaciones-page {
+        padding: 1rem;
+    }
+    .justificacion-card {
+        
+        flex-direction: column;
+    }
+    .justificacion-card-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+

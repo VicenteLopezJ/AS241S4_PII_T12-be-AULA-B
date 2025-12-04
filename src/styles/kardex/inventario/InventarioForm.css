@@ -1,0 +1,76 @@
+/* Fondo oscuro del modal */
+.inv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+/* Contenedor del modal */
+.inv-modal {
+  position: relative;
+  background: #2c2c3c;
+  color: #e5e7eb;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  animation: modalFade 0.3s ease;
+}
+
+/* Animación elegante */
+@keyframes modalFade {
+  from {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Centrado del formulario */
+.inv-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Título centrado */
+.inv-modal h2 {
+  text-align: center;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+}
+
+/* Botón de cerrar (X) */
+.inv-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  
+  background: transparent;
+  border: none;
+  color: #f1f5f9;
+  font-size: 1.6rem;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.inv-close-btn:hover {
+  color: #ff6b6b;
+  transform: scale(1.1);
+}

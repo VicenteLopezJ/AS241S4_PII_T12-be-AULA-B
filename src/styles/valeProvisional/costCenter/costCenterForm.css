@@ -1,0 +1,282 @@
+/* Vale Provisional - Cost Center Form Component Styles - Dark Theme */
+
+.vale-provisional-cost-center-formulario {
+  width: 100%;
+  padding: 2rem;
+}
+
+.vale-provisional-cost-center-contenedor-campos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.vale-provisional-cost-center-campo-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.vale-provisional-cost-center-campo-completo {
+  grid-column: 1 / -1;
+}
+
+.vale-provisional-cost-center-etiqueta-campo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.vale-provisional-cost-center-contador-caracteres {
+  font-size: 0.75rem;
+  color: #A0AEC0;
+  font-weight: 400;
+}
+
+.vale-provisional-cost-center-entrada-formulario {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  border: 1px solid #4A5568;
+  border-radius: 0.5rem;
+  background-color: #2D3748;
+  color: #F7FAFC;
+  transition: all 0.2s ease;
+  outline: none;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.vale-provisional-cost-center-entrada-formulario:focus {
+  border-color: #4299E1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+  background-color: #1A202C;
+}
+
+.vale-provisional-cost-center-entrada-formulario:disabled {
+  background-color: #4A5568;
+  color: #A0AEC0;
+  cursor: not-allowed;
+  border-color: #718096;
+}
+
+.vale-provisional-cost-center-entrada-error {
+  border-color: #FC8181 !important;
+  background-color: rgba(252, 129, 129, 0.05) !important;
+}
+
+.vale-provisional-cost-center-entrada-error:focus {
+  border-color: #FC8181 !important;
+  box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.1) !important;
+}
+
+.vale-provisional-cost-center-selector-desplegable {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23A0AEC0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.vale-provisional-cost-center-selector-desplegable:disabled {
+  cursor: not-allowed;
+}
+
+.vale-provisional-cost-center-campo-texto {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 150px;
+}
+
+/* Mensajes de error */
+.vale-provisional-cost-center-mensaje-error-general {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(254, 202, 202, 0.1);
+  color: #FCA5A5;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #FECACA;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.vale-provisional-cost-center-error-icon {
+  font-size: 1rem;
+}
+
+.vale-provisional-cost-center-mensaje-error-campo {
+  color: #FC8181;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.vale-provisional-cost-center-mensaje-error-campo::before {
+  content: "⚠️";
+  font-size: 0.75rem;
+}
+
+/* Botones */
+.vale-provisional-cost-center-contenedor-botones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid #4A5568;
+}
+
+.vale-provisional-cost-center-boton {
+  padding: 0.875rem 2rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  letter-spacing: 0.01em;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.vale-provisional-cost-center-boton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.vale-provisional-cost-center-boton-cancelar {
+  background-color: #4A5568;
+  color: #E2E8F0;
+  border: 1px solid #718096;
+}
+
+.vale-provisional-cost-center-boton-cancelar:hover:not(:disabled) {
+  background-color: #718096;
+  border-color: #90CDF4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.vale-provisional-cost-center-boton-enviar {
+  background-color: #4299E1;
+  color: #F7FAFC;
+  border: 1px solid #3182CE;
+  box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
+}
+
+.vale-provisional-cost-center-boton-enviar:hover:not(:disabled) {
+  background-color: #3182CE;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(66, 153, 225, 0.4);
+}
+
+.vale-provisional-cost-center-boton-enviar:disabled:not(:hover) {
+  background-color: #2D3748;
+  border-color: #4A5568;
+  color: #A0AEC0;
+}
+
+/* Spinner de carga */
+.vale-provisional-cost-center-cargando-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(247, 250, 252, 0.3);
+  border-top: 2px solid #F7FAFC;
+  border-radius: 50%;
+  animation: vale-provisional-cost-center-spin 0.8s linear infinite;
+}
+
+@keyframes vale-provisional-cost-center-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sección informativa */
+.vale-provisional-cost-center-seccion-informacion {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background-color: rgba(144, 205, 244, 0.1);
+  border: 1px solid #90CDF4;
+  border-radius: 0.5rem;
+}
+
+.vale-provisional-cost-center-texto-informativo {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  color: #90CDF4;
+  font-weight: 500;
+}
+
+.vale-provisional-cost-center-texto-informativo:last-child {
+  margin-bottom: 0;
+}
+
+.vale-provisional-cost-center-texto-informativo strong {
+  color: #63B3ED;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vale-provisional-cost-center-formulario {
+    padding: 1.5rem;
+  }
+  
+  .vale-provisional-cost-center-contenedor-campos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .vale-provisional-cost-center-contenedor-botones {
+    flex-direction: column;
+  }
+  
+  .vale-provisional-cost-center-boton {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Efectos de focus para accesibilidad */
+.vale-provisional-cost-center-entrada-formulario:focus,
+.vale-provisional-cost-center-boton:focus,
+.vale-provisional-cost-center-selector-desplegable:focus {
+  outline: 2px solid #4299E1;
+  outline-offset: 2px;
+}
+
+/* Scrollbar personalizado para textarea */
+.vale-provisional-cost-center-campo-texto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.vale-provisional-cost-center-campo-texto::-webkit-scrollbar-track {
+  background: #2D3748;
+  border-radius: 4px;
+}
+
+.vale-provisional-cost-center-campo-texto::-webkit-scrollbar-thumb {
+  background: #4A5568;
+  border-radius: 4px;
+}
+
+.vale-provisional-cost-center-campo-texto::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}

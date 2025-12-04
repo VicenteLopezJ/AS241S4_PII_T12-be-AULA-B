@@ -1,0 +1,1099 @@
+/* Contenedor principal */
+.vale-provisional-voucher-list-container {
+  min-height: 100vh;
+  background: #232C3A;
+  padding: 24px;
+  color: #f8fafc;
+}
+
+/* Header */
+.vale-provisional-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: #a7b1c4;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #4A5568;
+}
+
+.vale-provisional-header-title h1 {
+  font-size: 2rem;
+  color: #f1f5f9;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.vale-provisional-header-title p {
+  color: #94a3b8;
+  margin: 0;
+  font-size: 16px;
+}
+
+.vale-provisional-btn-create {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #3B82F6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #4A5568;
+}
+
+.vale-provisional-btn-create:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+}
+
+/* Controles de búsqueda */
+.vale-provisional-search-controls {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #2D3748;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #4A5568;
+  flex-wrap: wrap;
+}
+
+.vale-provisional-search-input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 300px;
+  padding: 0.75rem;
+  border: 1px solid #4A5568;
+  border-radius: 8px;
+  background: #2D3748;
+  transition: all 0.3s ease;
+}
+
+.vale-provisional-search-input-container:focus-within {
+  border-color: #718096;
+  box-shadow: 0 0 0 2px rgba(113, 128, 150, 0.2);
+}
+
+.vale-provisional-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 0.875rem;
+  color: #f1f5f9;
+}
+
+.vale-provisional-search-input::placeholder {
+  color: #718096;
+}
+
+.vale-provisional-filters-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vale-provisional-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vale-provisional-filter-select {
+  padding: 0.75rem;
+  border: 1px solid #4A5568;
+  border-radius: 6px;
+  background: #2D3748;
+  font-size: 0.875rem;
+  min-width: 150px;
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+.vale-provisional-filter-select option {
+  background: #2D3748;
+  color: #f1f5f9;
+}
+
+.vale-provisional-refresh-btn {
+  background: #4A5568;
+  color: #e2e8f0;
+  border: 1px solid #718096;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vale-provisional-refresh-btn:hover {
+  background: #718096;
+}
+
+/* Mensajes de error */
+.vale-provisional-error-message {
+  background: rgba(245, 101, 101, 0.1);
+  border: 1px solid rgba(245, 101, 101, 0.3);
+  color: #F56565;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vale-provisional-retry-button {
+  background: #EF4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.vale-provisional-retry-button:hover {
+  background: #DC2626;
+}
+
+/* Información de resultados */
+.vale-provisional-results-info {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3B82F6;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Tabla */
+.vale-provisional-table-container {
+  background: #2D3748;
+  border-radius: 12px;
+  border: 1px solid #4A5568;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.vale-provisional-vouchers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vale-provisional-table-header {
+  background: #4A5568;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #f1f5f9;
+  border-bottom: 1px solid #4A5568;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vale-provisional-table-header-actions {
+  text-align: center;
+  width: 200px;
+}
+
+.vale-provisional-table-row {
+  border-bottom: 1px solid #4A5568;
+  transition: background 0.3s ease;
+}
+
+.vale-provisional-table-row:hover {
+  background: #4A5568;
+}
+
+.vale-provisional-table-cell {
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #f1f5f9;
+}
+
+/* Estilos específicos de celdas */
+.vale-provisional-correlative-container {
+  display: flex;
+  align-items: center;
+}
+
+.vale-provisional-correlative-code {
+  font-weight: 700;
+  color: #3B82F6;
+  font-size: 0.875rem;
+}
+
+.vale-provisional-applicant-info,
+.vale-provisional-activity-info,
+.vale-provisional-cost-center-info,
+.vale-provisional-signature-info {
+  display: flex;
+  align-items: center;
+}
+
+.vale-provisional-applicant-name,
+.vale-provisional-cost-center-name,
+.vale-provisional-signature-name {
+  color: #f1f5f9;
+}
+
+.vale-provisional-activity-text {
+  color: #CBD5E0;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vale-provisional-amount-container {
+  display: flex;
+  align-items: center;
+}
+
+.vale-provisional-amount-value {
+  font-weight: 700;
+  color: #10B981;
+}
+
+.vale-provisional-date-text {
+  color: #CBD5E0;
+}
+
+/* Badge de estado */
+.vale-provisional-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+/* Acciones */
+.vale-provisional-actions-container {
+  display: flex;
+  gap: 0.375rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vale-provisional-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border: 1px solid transparent;
+}
+
+.vale-provisional-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.vale-provisional-view-btn { 
+  background: #2e3849; 
+  border-color: #2e3849;
+}
+.vale-provisional-view-btn:hover { 
+  background: #7f9dde; 
+}
+
+.vale-provisional-edit-btn { 
+  background: #2e3849; 
+  border-color: #2e3849;
+}
+.vale-provisional-edit-btn:hover { 
+  background: #ca8d48; 
+}
+
+.vale-provisional-approve-btn { 
+  background: #2e3849; 
+  border-color: #2e3849;
+}
+.vale-provisional-approve-btn:hover { 
+  background: #4ba78a; 
+}
+
+.vale-provisional-reject-btn { 
+  background: #2e3849; 
+  border-color: #2e3849;
+}
+.vale-provisional-reject-btn:hover { 
+  background: #dc6666; 
+}
+
+.vale-provisional-delete-btn { 
+  background: #2e3849; 
+  border-color: #2e3849;
+}
+.vale-provisional-delete-btn:hover { 
+  background: #4B5563; 
+}
+
+.vale-provisional-download-btn { 
+  background: #2e3849; 
+  border-color: #2e3849;
+}
+.vale-provisional-download-btn:hover { 
+  background: #b396e5; 
+}
+
+/* Estados vacíos */
+.vale-provisional-empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #A0AEC0;
+  background: #2D3748;
+  border: 2px dashed #4A5568;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.vale-provisional-empty-state h3 {
+  margin: 1rem 0 0.5rem 0;
+  color: #f1f5f9;
+  font-size: 1.25rem;
+}
+
+.vale-provisional-empty-state p {
+  margin: 0 0 2rem 0;
+  color: #A0AEC0;
+}
+
+.vale-provisional-btn-create-empty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #3B82F6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  border: 1px solid #4A5568;
+}
+
+.vale-provisional-btn-create-empty:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+}
+
+/* Loading */
+.vale-provisional-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: #A0AEC0;
+  background: #2D3748;
+  border-radius: 12px;
+  border: 1px solid #4A5568;
+}
+
+.vale-provisional-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #4A5568;
+  border-top: 3px solid #718096;
+  border-radius: 50%;
+  animation: vale-provisional-spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes vale-provisional-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.vale-provisional-loading-text {
+  font-size: 1rem;
+  color: #A0AEC0;
+}
+
+/* ===== MODALES ===== */
+.vale-provisional-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(35, 44, 58, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.vale-provisional-modal-content {
+  background: #2D3748;
+  border-radius: 16px;
+  border: 1px solid #4A5568;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: vale-provisional-modalSlideIn 0.3s ease-out;
+}
+
+@keyframes vale-provisional-modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.vale-provisional-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #4A5568;
+  background: #2D3748;
+}
+
+.vale-provisional-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.vale-provisional-modal-close {
+  background: #4A5568;
+  border: 1px solid #718096;
+  color: #A0AEC0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vale-provisional-modal-close:hover {
+  background: #718096;
+  color: #e2e8f0;
+}
+
+.vale-provisional-modal-body {
+  color: #f1f5f9;
+}
+
+.vale-provisional-modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #4A5568;
+  background: #2D3748;
+}
+
+/* Botones de modal */
+.vale-provisional-btn-primary, 
+.vale-provisional-btn-secondary, 
+.vale-provisional-btn-danger {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vale-provisional-btn-primary {
+  background: #3B82F6;
+  border-color: #2563EB;
+  color: white;
+}
+
+.vale-provisional-btn-primary:hover:not(:disabled) {
+  background: #2563EB;
+  transform: translateY(-1px);
+}
+
+.vale-provisional-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.vale-provisional-btn-secondary {
+  background: #4A5568;
+  border-color: #718096;
+  color: #e2e8f0;
+}
+
+.vale-provisional-btn-secondary:hover {
+  background: #718096;
+}
+
+.vale-provisional-btn-danger {
+  background: #EF4444;
+  border-color: #DC2626;
+  color: white;
+}
+
+.vale-provisional-btn-danger:hover:not(:disabled) {
+  background: #DC2626;
+  transform: translateY(-1px);
+}
+
+.vale-provisional-btn-danger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Contenido específico de modales */
+.vale-provisional-voucher-details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vale-provisional-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #4A5568;
+  border-radius: 8px;
+  border: 1px solid #718096;
+}
+
+.vale-provisional-detail-item svg {
+  color: #718096;
+  margin-top: 0.125rem;
+}
+
+.vale-provisional-detail-item div {
+  flex: 1;
+}
+
+.vale-provisional-detail-item label {
+  display: block;
+  font-weight: 600;
+  color: #A0AEC0;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vale-provisional-detail-item span {
+  color: #f1f5f9;
+  font-size: 0.875rem;
+}
+
+.vale-provisional-detail-item .vale-provisional-amount {
+  font-weight: 700;
+  color: #10B981;
+  font-size: 1rem;
+}
+
+/* Modal de aprobación */
+.vale-provisional-approve-content, 
+.vale-provisional-reject-content, 
+.vale-provisional-delete-content {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.vale-provisional-approve-icon {
+  color: #10B981;
+  margin-bottom: 1rem;
+}
+
+.vale-provisional-reject-icon {
+  color: #EF4444;
+  margin-bottom: 1rem;
+}
+
+.vale-provisional-delete-icon {
+  color: #EF4444;
+  margin-bottom: 1rem;
+}
+
+.vale-provisional-modal-subtitle {
+  color: #A0AEC0;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Input de motivo de rechazo */
+.vale-provisional-reason-input {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.vale-provisional-reason-input label {
+  display: block;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+.vale-provisional-reason-input textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #4A5568;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  resize: vertical;
+  min-height: 80px;
+  background: #2D3748;
+  color: #f1f5f9;
+}
+
+.vale-provisional-reason-input textarea:focus {
+  outline: none;
+  border-color: #718096;
+  box-shadow: 0 0 0 2px rgba(113, 128, 150, 0.2);
+}
+
+.vale-provisional-reason-input textarea::placeholder {
+  color: #718096;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vale-provisional-voucher-list-container {
+    padding: 16px;
+  }
+  
+  .vale-provisional-list-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .vale-provisional-search-controls {
+    flex-direction: column;
+  }
+  
+  .vale-provisional-search-input-container {
+    min-width: auto;
+  }
+  
+  .vale-provisional-filters-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .vale-provisional-filter-group {
+    justify-content: space-between;
+  }
+  
+  .vale-provisional-table-container {
+    overflow-x: auto;
+  }
+  
+  .vale-provisional-vouchers-table {
+    min-width: 800px;
+  }
+  
+  .vale-provisional-actions-container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  .vale-provisional-action-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0.375rem;
+  }
+
+  .vale-provisional-modal-overlay {
+    padding: 1rem;
+  }
+  
+  .vale-provisional-modal-content {
+    max-width: 100%;
+  }
+  
+  .vale-provisional-modal-header {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .vale-provisional-modal-body {
+    padding: 1.5rem;
+  }
+  
+  .vale-provisional-modal-actions {
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+  }
+  
+  .vale-provisional-btn-primary, 
+  .vale-provisional-btn-secondary, 
+  .vale-provisional-btn-danger {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Estilo para el botón de seguimiento en los filtros */
+.vale-provisional-filters-container .vale-provisional-nav-btn {
+  padding: 0.75rem 1rem;
+  border: 1px solid #4A5568;
+  border-radius: 8px;
+  background: #2D3748;
+  color: #e2e8f0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vale-provisional-filters-container .vale-provisional-nav-btn:hover {
+  background: #4A5568;
+  border-color: #718096;
+  transform: translateY(-1px);
+}
+
+/* Estilo para el botón de crear voucher */
+.vale-provisional-create-voucher-btn {
+  background: #10B981 !important;
+  color: white !important;
+  border-color: #059669 !important;
+}
+
+.vale-provisional-create-voucher-btn:hover {
+  background: #059669 !important;
+  border-color: #047857 !important;
+}
+
+.vale-provisional-voucher-list-container.vale-provisional-modal-open {
+  overflow: hidden;
+}
+
+.vale-provisional-modal-content.vale-provisional-large-modal {
+  max-width: 800px;
+  width: 95%;
+}
+
+@keyframes vale-provisional-modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ===== ESTILOS PARA LAS TARJETAS DE ESTADÍSTICAS ===== */
+.vale-provisional-stats-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.vale-provisional-stat-card {
+  background: #2D3748;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #4A5568;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vale-provisional-stat-card:hover {
+  background: #4A5568;
+  border-color: #718096;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.vale-provisional-stat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vale-provisional-stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+}
+
+.vale-provisional-stat-label {
+  font-size: 0.875rem;
+  color: #A0AEC0;
+  font-weight: 500;
+}
+
+/* Estilos específicos para cada tipo de tarjeta */
+.vale-provisional-stat-card:nth-child(1) {
+  border-left: 4px solid #3B82F6; /* Total - Azul */
+}
+
+.vale-provisional-stat-card:nth-child(2) {
+  border-left: 4px solid #F59E0B; /* Pendientes - Amarillo/Naranja */
+}
+
+.vale-provisional-stat-card:nth-child(3) {
+  border-left: 4px solid #10B981; /* Aprobados - Verde */
+}
+
+.vale-provisional-stat-card:nth-child(4) {
+  border-left: 4px solid #EF4444; /* Rechazados - Rojo */
+}
+
+/* Responsive para stats */
+@media (max-width: 768px) {
+  .vale-provisional-stats-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .vale-provisional-stat-card {
+    padding: 16px;
+  }
+  
+  .vale-provisional-stat-number {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vale-provisional-stats-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== ESTILOS MEJORADOS PARA MODAL DE DETALLES ===== */
+
+/* Header del modal de detalles */
+.vale-provisional-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #4A5568;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+.vale-provisional-correlative-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #4A5568;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #718096;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.vale-provisional-status-badge.vale-provisional-large-badge {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Grid mejorado para detalles */
+.vale-provisional-details-grid-improved {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.vale-provisional-detail-section {
+  background: #4A5568;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #718096;
+  margin-bottom: 1rem;
+}
+
+.vale-provisional-detail-section.vale-provisional-full-width {
+  width: 100%;
+}
+
+.vale-provisional-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f1f9f1;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #718096;
+}
+
+.vale-provisional-detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vale-provisional-detail-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.vale-provisional-detail-field label {
+  font-weight: 600;
+  color: #A0AEC0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vale-provisional-detail-value {
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.vale-provisional-detail-value.vale-provisional-amount-large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10B981;
+}
+
+/* Estilos para la sección de actividad */
+.vale-provisional-activity-content {
+  background: #2D3748;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #4A5568;
+}
+
+.vale-provisional-activity-description {
+  margin: 0;
+  color: #f1f5f9;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Responsive para el modal de detalles */
+@media (max-width: 768px) {
+  .vale-provisional-detail-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .vale-provisional-correlative-badge {
+    justify-content: center;
+  }
+  
+  .vale-provisional-detail-section {
+    padding: 1rem;
+  }
+  
+  .vale-provisional-detail-value.vale-provisional-amount-large {
+    font-size: 1.25rem;
+  }
+  
+  .vale-provisional-section-title {
+    font-size: 1rem;
+  }
+}
+
+/* Botones específicos adicionales */
+.vale-provisional-excel-btn {
+  background: #10B981 !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.vale-provisional-excel-btn:hover {
+  background: #059669 !important;
+  transform: translateY(-1px) !important;
+}
+
+.vale-provisional-excel-btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.vale-provisional-nav-btn {
+  background: #141e2f !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.vale-provisional-nav-btn:hover {
+  background: #2563EB !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Efectos de hover corregidos */
+.vale-provisional-refresh-btn:hover,
+.vale-provisional-btn-create:hover,
+.vale-provisional-btn-create-empty:hover,
+.vale-provisional-action-btn:hover {
+  transform: translateY(-1px) !important;
+}

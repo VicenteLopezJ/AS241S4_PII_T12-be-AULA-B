@@ -1,0 +1,380 @@
+/* CAMBIÉ .prov-page POR .proveedor-container */
+.proveedor-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #1e1e2f;
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* 📌 Título */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* 📌 TARJETAS ESTADÍSTICAS */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #1b1b28;
+  padding: 1.4rem;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.35);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d1d5db;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+  color: #ffffff;
+}
+
+.stat-card.active {
+  border-left: 4px solid #22c55e;
+}
+
+.stat-card.inactive {
+  border-left: 4px solid #ef4444;
+}
+
+.stat-card.warning {
+  border-left: 4px solid #facc15;
+}
+
+/* 📌 Controles superiores */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  background: #2c2c3c;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.search-input {
+  padding: 0.55rem 1rem;
+  background-color: #33334d;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  flex-grow: 1;
+  min-width: 250px;
+}
+
+.search-input::placeholder {
+  color: #bbb;
+}
+
+.filter-select {
+  padding: 0.55rem 1rem;
+  background-color: #33334d;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  min-width: 180px;
+}
+
+/* 📥 Botones principales */
+.btn {
+  padding: 0.55rem 1.2rem;
+  background: #33334d;
+  color: #ffffff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  background: #3d3d57;
+  transform: translateY(-2px);
+}
+
+.btn.add-btn {
+  background: #1e40af;
+  border-color: #1e3a8a;
+  color: #dbeafe;
+}
+
+.btn.add-btn:hover {
+  background: #1d4ed8;
+}
+
+.btn.pdf {
+  background: #6b21a8;
+  border-color: #581c87;
+  color: #f3e8ff;
+}
+
+.btn.excel {
+  background: #166534;
+  border-color: #14532d;
+  color: #d1fae5;
+}
+
+.btn.refresh {
+  background: #7c3aed;
+  border-color: #5b21b6;
+  color: white;
+  padding: 0.55rem;
+  width: 40px;
+  height: 40px;
+}
+
+/* 📋 CONTAINER DE TABLA */
+.table-container {
+  background: #2c2c3c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.table-header {
+  padding: 1rem;
+  background: #33334d;
+  border-bottom: 1px solid #444;
+}
+
+.table-count {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 📌 Tabla - CAMBIÉ .prov-table POR .proveedor-table */
+.proveedor-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #2c2c3c;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: auto;
+}
+
+.proveedor-table th,
+.proveedor-table td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  vertical-align: middle;
+}
+
+.proveedor-table th {
+  background: #33334d;
+  color: #f1f1f1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.proveedor-table tr:hover {
+  background: #3d3d57;
+}
+
+/* 📌 Botones de acción en tabla */
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.view, .edit, .delete, .restore {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.view {
+  background: #2563eb;
+  color: #dbeafe;
+  border-color: #1e40af;
+}
+
+.view:hover {
+  background: #1d4ed8;
+}
+
+.edit {
+  background: #f59e0b;
+  color: #fff7ed;
+  border-color: #b45309;
+}
+
+.edit:hover {
+  background: #d97706;
+}
+
+.delete {
+  background: #dc2626;
+  color: #fee2e2;
+  border-color: #991b1b;
+}
+
+.delete:hover {
+  background: #b91c1c;
+}
+
+.restore {
+  background: #16a34a;
+  color: #d1fae5;
+  border-color: #14532d;
+}
+
+.restore:hover {
+  background: #15803d;
+}
+
+/* 📭 Estado cuando no hay resultados */
+.no-data {
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-state p {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+/* Badges de estado */
+.badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.badge.active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge.inactive {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Filas inactivas */
+.inactive-row {
+  background-color: #2c2c3c;
+  color: #ffffff;
+}
+
+.inactive-row:hover {
+  background-color: #3d3d57;
+}
+
+/* LOADING */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #4db6ac;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .stats-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .proveedor-container {
+    padding: 1.5rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input,
+  .filter-select {
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .proveedor-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-actions {
+    flex-direction: column;
+  }
+  
+  .proveedor-table button {
+    width: 100%;
+  }
+}

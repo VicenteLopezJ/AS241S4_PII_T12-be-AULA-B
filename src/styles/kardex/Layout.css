@@ -1,0 +1,122 @@
+/* ---- CONTENEDOR GENERAL ---- */
+.layout-container-new {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ---- SIDEBAR ---- */
+.sidebar-new {
+  width: 260px; /* 👈 mismo ancho */
+  background-color: #151520; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-right: 1px solid #2a3544;
+}
+
+/* ---- LOGO ---- */
+.sidebar-logo-new {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2a3544;
+  margin-bottom: 12px;
+}
+
+.sidebar-logo-new img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.logo-title-new {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #00A76F;
+}
+
+/* ---- NAV ---- */
+.nav-links-new {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.nav-item-new {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.nav-item-new:hover {
+  background-color: #C8FAD6;
+  color: black !important;
+}
+
+.nav-item-new.active-new {
+  background-color: #C8FAD6;
+  color: black !important;
+  font-weight: bold;
+}
+
+.nav-item-new.active-new .nav-icon-new svg {
+  color: black !important;
+}
+
+.nav-icon-new svg {
+  color: #637381;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-item-new:hover .nav-icon-new svg {
+  color: #007867;
+}
+
+.nav-text-new {
+  flex: 1;
+  font-size: 15px;
+}
+
+/* ---- LOGOUT ---- */
+.logout-container-new {
+  margin-top: auto;
+  border-top: 1px solid #2a3544;
+  padding-top: 14px;
+}
+
+.logout-btn-new {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background-color: #E53935;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.logout-btn-new:hover {
+  background-color: #c62828;
+}
+
+/* ---- MAIN ---- */
+.main-content-new {
+  flex: 1;
+  background: #1e1e2f;
+  padding: 20px;
+  overflow-y: auto;
+}

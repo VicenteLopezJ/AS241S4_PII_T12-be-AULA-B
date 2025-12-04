@@ -1,0 +1,311 @@
+/* CONTENEDOR — Igual que .med-page */
+.inventario-container {
+  padding: 2rem;
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  color: #e5e7eb;
+  min-height: 90vh;
+}
+
+/* TÍTULO */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* TARJETAS ESTADÍSTICAS — colores igualados */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #2c2c3c;
+  padding: 1.4rem;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.09);
+}
+
+.stat-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.stat-card.warning .stat-value {
+  color: #f87171;
+}
+
+/* Efectos */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+  border-radius: 50%;
+}
+
+.stat-card::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255,255,255,0.04), transparent 70%);
+  border-radius: 50%;
+}
+
+.stat-card.active {
+  border-left: 4px solid #22c55e;
+}
+
+.stat-card.inactive {
+  border-left: 4px solid #ef4444;
+}
+
+.stat-card.warning {
+  border-left: 4px solid #facc15;
+}
+
+/* CONTROLES */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input,
+.filter-select {
+  padding: 0.6rem 1rem;
+  background-color: #2c2c3c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+/* BOTONES — MEJORADOS */
+.btn,
+.icon-btn {
+  padding: 0.55rem 1.1rem;
+  background: #40405a;            /* Mejor contraste */
+  color: #e5e7eb;
+  border: 1px solid #565672;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: 600;
+}
+
+.btn:hover,
+.icon-btn:hover {
+  background: #50507a;
+  border-color: #6b6b93;
+  transform: translateY(-2px);
+}
+
+/* BOTÓN AGREGAR (opcional) */
+.btn.add-btn {
+  background: #1e40af;
+  border-color: #1e3a8a;
+  color: #dbeafe;
+}
+
+.btn.add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* BOTONES PDF / EXCEL */
+.btn.pdf {
+  background: #6b21a8;
+  border-color: #581c87;
+}
+
+.btn.pdf:hover {
+  background: #7e22ce;
+}
+
+.btn.excel {
+  background: #166534;
+  border-color: #14532d;
+}
+
+.btn.excel:hover {
+  background: #15803d;
+}
+
+/* BOTONES PELIGRO */
+.icon-btn.danger {
+  background: #4c1f1f;
+  color: #fca5a5;
+  border: 1px solid #7f1d1d;
+}
+
+.icon-btn.danger:hover {
+  background-color: #7f1d1d;
+  color: white;
+  border-color: #991b1b;
+}
+
+/* BOTÓN RESTAURAR */
+.icon-btn.restore {
+  background: #1f3d28;
+  color: #86efac;
+  border: 1px solid #14532d;
+}
+
+.icon-btn.restore:hover {
+  background-color: #14532d;
+  color: white;
+}
+
+/* TABLA */
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #2c2c3c;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  color: #e5e7eb;
+}
+
+.inventory-table th {
+  background-color: #33334d;
+  color: #f1f1f1;
+  font-weight: 600;
+}
+
+.inventory-table tr:hover {
+  background-color: #3d3d57;
+  transition: 0.2s;
+}
+
+/* BADGES */
+.badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.badge.active {
+  background-color: #bbf7d0;
+  color: #166534;
+}
+
+.badge.inactive {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stats-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* BOTONES DE ACCIONES EN TABLA */
+.inventory-table button {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.25s ease;
+  margin: 0 2px;
+  font-size: 0.9rem;
+}
+
+/* VER */
+.inventory-table button.view {
+  background: #2563eb; /* azul */
+  color: #dbeafe;
+  border-color: #1e40af;
+}
+
+.inventory-table button.view:hover {
+  background: #1d4ed8;
+}
+
+/* EDITAR */
+.inventory-table button.edit {
+  background: #f59e0b; /* naranja */
+  color: #fff7ed;
+  border-color: #b45309;
+}
+
+.inventory-table button.edit:hover {
+  background: #d97706;
+}
+
+/* ELIMINAR */
+.inventory-table button.delete {
+  background: #dc2626; /* rojo */
+  color: #fee2e2;
+  border-color: #991b1b;
+}
+
+.inventory-table button.delete:hover {
+  background: #b91c1c;
+}
+
+/* RESTAURAR */
+.inventory-table button.restore {
+  background: #16a34a; /* verde */
+  color: #d1fae5;
+  border-color: #14532d;
+}
+
+.inventory-table button.restore:hover {
+  background: #15803d;
+}

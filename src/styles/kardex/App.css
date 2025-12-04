@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Custom CSS adicional si es necesario */
+.App {
+  min-height: 100vh;
+  width: 100%;
+}

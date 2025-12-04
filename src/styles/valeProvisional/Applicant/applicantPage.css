@@ -1,0 +1,238 @@
+/* applicantPage.css */
+.applicant-page {
+  min-height: 100vh;
+  background: #232C3A;
+  color: #E2E8F0;
+  padding: 0;
+}
+
+/* Header Principal */
+.applicant-page__header {
+  background: #232C3A;
+  padding: 44px 32px;
+}
+
+.applicant-page__header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.applicant-page__header-text {
+  flex: 1;
+}
+
+.applicant-page__title {
+  margin: 0;
+  color: #F7FAFC;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.applicant-page__subtitle {
+  margin: 8px 0 0 0;
+  color: #CBD5E0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.applicant-page__header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Botones */
+.applicant-page__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.applicant-page__btn--primary {
+  background: #4299E1;
+  color: #F7FAFC;
+}
+
+.applicant-page__btn--primary:hover {
+  background: #3182CE;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.applicant-page__btn--secondary {
+  background: #4A5568;
+  color: #E2E8F0;
+  padding: 12px;
+}
+
+.applicant-page__btn--secondary:hover {
+  background: #718096;
+  transform: translateY(-1px);
+}
+
+/* Sección de Estadísticas */
+.applicant-page__stats-section {
+  padding: 32px;
+  background: #232C3A;
+}
+
+.applicant-page__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Sección de Tabla */
+.applicant-page__table-section {
+  padding: 0 ;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Estados de Loading */
+.applicant-page__loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  background: #2D3748;
+  border-radius: 12px;
+  border: 1px solid #4A5568;
+  color: #A0AEC0;
+}
+
+.applicant-page__loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #4A5568;
+  border-top: 4px solid #4299E1;
+  border-radius: 50%;
+  animation: applicantPageSpin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.applicant-page__loading-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@keyframes applicantPageSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Banner de Error */
+.applicant-page__error-banner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(252, 129, 129, 0.1);
+  border: 1px solid #FC8181;
+  color: #FEB2B2;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 1000;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.applicant-page__error-close {
+  background: none;
+  border: none;
+  color: #FEB2B2;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.applicant-page__error-close:hover {
+  background: rgba(252, 129, 129, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .applicant-page__header-content,
+  .applicant-page__stats-grid,
+  .applicant-page__table-section {
+    max-width: 100%;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .applicant-page__header,
+  .applicant-page__stats-section,
+  .applicant-page__table-section {
+    padding: 20px 24px;
+  }
+
+  .applicant-page__header-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .applicant-page__title {
+    font-size: 28px;
+  }
+
+  .applicant-page__stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .applicant-page__header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .applicant-page__header,
+  .applicant-page__stats-section,
+  .applicant-page__table-section {
+    padding: 16px;
+  }
+
+  .applicant-page__title {
+    font-size: 24px;
+  }
+
+  .applicant-page__btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .applicant-page__stats-section {
+    padding: 20px 16px;
+  }
+}

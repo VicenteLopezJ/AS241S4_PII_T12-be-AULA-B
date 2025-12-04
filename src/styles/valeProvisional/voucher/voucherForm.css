@@ -1,0 +1,398 @@
+/* ===== ESTRUCTURA PRINCIPAL ===== */
+.voucher-form {
+  background: #91a0bb;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  color: white;
+}
+
+form-select
+/* ===== HEADER DEL FORMULARIO ===== */
+.form-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #4A5568;
+}
+
+.form-header h2 {
+  font-size: 1.75rem;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.form-header p {
+  color: #E2E8F0;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* ===== LAYOUT DE DOS COLUMNAS ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.form-full-width {
+  grid-column: 1 / -1;
+}
+
+/* ===== GRUPOS DE FORMULARIO ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* ===== CAMPOS DE FORMULARIO - ESTILOS FORZADOS ===== */
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #CBD5E0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #FFFFFF !important;
+  color: #1A202C !important;
+  min-height: 48px;
+  box-sizing: border-box;
+}
+
+/* Forzar estilos específicos para inputs */
+.form-input {
+  background-color: #FFFFFF !important;
+  color: #1A202C !important;
+  border: 2px solid #CBD5E0 !important;
+}
+
+/* Forzar estilos específicos para selects */
+.form-select {
+  background-color: #FFFFFF !important;
+  color: #1A202C !important;
+  border: 2px solid #CBD5E0 !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%234A5568' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+  background-position: right 12px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px !important;
+  padding-right: 40px !important;
+}
+
+/* Forzar estilos para textareas */
+.form-textarea {
+  background-color: #FFFFFF !important;
+  color: #1A202C !important;
+  border: 2px solid #CBD5E0 !important;
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Placeholders con color oscuro */
+.form-input::placeholder {
+  color: #718096 !important;
+  opacity: 1 !important;
+}
+
+.form-textarea::placeholder {
+  color: #718096 !important;
+  opacity: 1 !important;
+}
+
+/* Estados de focus */
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none !important;
+  border-color: #2c5aa0 !important;
+  box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.2) !important;
+  background-color: #FFFFFF !important;
+  color: #1A202C !important;
+}
+
+/* Estilos específicos para inputs de fecha */
+input[type="date"].form-input {
+  color: #1A202C !important;
+  background-color: #FFFFFF !important;
+}
+
+/* Forzar color en los options del select */
+.form-select option {
+  background-color: #FFFFFF !important;
+  color: #1A202C !important;
+  padding: 8px;
+}
+
+/* Estados de los campos */
+.form-input:not(:placeholder-shown),
+.form-select:not([value=""]),
+.form-textarea:not(:placeholder-shown) {
+  color: #1A202C !important;
+  background-color: #FFFFFF !important;
+}
+
+/* ===== MENSAJES DE ERROR ===== */
+.form-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #F56565;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  grid-column: 1 / -1;
+}
+
+/* ===== ACCIONES DEL FORMULARIO ===== */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #4A5568;
+  grid-column: 1 / -1;
+}
+
+.btn-cancel,
+.btn-submit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.btn-cancel {
+  background: #718096;
+  border-color: #A0AEC0;
+  color: white;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #A0AEC0;
+  border-color: #CBD5E0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(160, 174, 192, 0.3);
+}
+
+.btn-submit {
+  background: #2c5aa0;
+  border-color: #1e3f73;
+  color: white;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #1e3f73;
+  border-color: #1a365d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
+}
+
+.btn-cancel:disabled,
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-full-width {
+    grid-column: 1;
+  }
+  
+  .voucher-form {
+    padding: 1.5rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn-cancel,
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+
+/* Agrega estas reglas al final de tu voucherForm.css */
+
+/* Estados de validación */
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  border-color: #dc3545 !important;
+  background-color: #fff5f5;
+}
+
+.form-input.success,
+.form-select.success,
+.form-textarea.success {
+  border-color: #28a745 !important;
+  background-color: #f8fff9;
+}
+
+/* Mensajes de error y éxito */
+.field-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #dc3545;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.field-success {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #28a745;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Asterisco de campos requeridos */
+.required-asterisk {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Nota de campos requeridos */
+.required-fields-notice {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+}
+
+/* Contador de caracteres */
+.char-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-counter .warning {
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.char-counter .danger {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* Resumen de validación */
+.validation-summary {
+  margin: 1.5rem 0;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.summary-card.valid {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.summary-card.invalid {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Mejoras visuales para campos deshabilitados */
+.form-input:read-only {
+  background-color: #e9ecef !important;
+  color: #6c757d !important;
+  cursor: not-allowed;
+}
+
+/* Indicadores visuales en los labels */
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Estados de carga mejorados */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Tooltip para botón deshabilitado */
+.btn-submit:disabled {
+  position: relative;
+}
+
+.btn-submit:disabled:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+/* Responsive para mensajes de error */
+@media (max-width: 768px) {
+  .field-error,
+  .field-success {
+    font-size: 0.7rem;
+  }
+  
+  .summary-card {
+    font-size: 0.85rem;
+  }
+}

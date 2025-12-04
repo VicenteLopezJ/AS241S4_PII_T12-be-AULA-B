@@ -1,0 +1,501 @@
+/* src/styles/asistencia/student/justificacion/Justificacion.css */
+/* PALETA EXACTA DEL DASHBOARD */
+
+.justificaciones-page {
+    background-color: #1f2937;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== BADGES DE ESTADO ========== */
+.badge-pendiente {
+    background-color: #fef3c7;
+    color: #a16207;
+    border: 2px solid #ca8a04;
+    font-weight: 800;
+    box-shadow: 0 2px 4px rgba(202, 138, 4, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.badge-aprobado {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 2px solid #16a34a;
+    font-weight: 800;
+    box-shadow: 0 2px 4px rgba(22, 163, 74, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.badge-rechazada {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+    border: 2px solid #dc2626;
+    font-weight: 800;
+    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.badge-parcial {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: 2px solid #2563eb;
+    font-weight: 800;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.badge-fuera-plazo {
+    background-color: #94a3b8;
+    color: #0f172a;
+    border: 2px solid #64748b;
+    font-weight: 800;
+    box-shadow: 0 2px 4px rgba(100, 116, 139, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+/* ========== CARDS ========== */
+.justificacion-card,
+.batch-card {
+    background-color: #cbd5e1 !important;
+    border: 2px solid #94a3b8 !important;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.justificacion-card:hover,
+.batch-card:hover {
+    border-color: #64748b !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ========== TÍTULOS Y TEXTOS ========== */
+.card-title,
+.section-title {
+    color: #0f172a !important;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    letter-spacing: -0.01em;
+}
+
+.card-subtitle,
+.text-muted {
+    color: #1e293b !important;
+    font-weight: 600;
+}
+
+.text-secondary {
+    color: #334155 !important;
+    font-weight: 600;
+}
+
+/* ========== FORMULARIOS ========== */
+.form-container {
+    background-color: #cbd5e1 !important;
+    border: 2px solid #94a3b8 !important;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    background-color: #e2e8f0 !important;
+    border: 2px solid #94a3b8 !important;
+    color: #0f172a !important;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: #16a34a !important;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.form-label {
+    color: #0f172a !important;
+    font-weight: 800;
+    font-size: 0.875rem;
+}
+
+/* ========== ALERTAS ========== */
+.alert-info {
+    background-color: #dbeafe;
+    border: 2px solid #2563eb;
+    color: #1e40af;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.alert-warning {
+    background-color: #fef3c7;
+    border: 2px solid #ca8a04;
+    color: #a16207;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.alert-success {
+    background-color: #dcfce7;
+    border: 2px solid #16a34a;
+    color: #15803d;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    border: 2px solid #dc2626;
+    color: #7f1d1d;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== BOTONES ========== */
+.btn-primary {
+    background-color: #16a34a !important;
+    color: white !important;
+    border: 2px solid #15803d !important;
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #15803d !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(22, 163, 74, 0.4);
+}
+
+.btn-danger {
+    background-color: #dc2626 !important;
+    color: white !important;
+    border: 2px solid #b91c1c !important;
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(220, 38, 38, 0.4);
+}
+
+.btn-secondary {
+    background-color: #64748b !important;
+    color: white !important;
+    border: 2px solid #475569 !important;
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #475569 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(100, 116, 139, 0.4);
+}
+
+/* ========== ESTADÍSTICAS ========== */
+.stat-card {
+    background-color: #cbd5e1 !important;
+    border: 2px solid #94a3b8 !important;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #0f172a;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #334155;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
+/* ========== TABS ========== */
+.tab-button {
+    border-radius: 0.5rem;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #16a34a !important;
+    color: white !important;
+    box-shadow: 0 4px 8px rgba(22, 163, 74, 0.4);
+}
+
+.tab-button:not(.active) {
+    background-color: #64748b !important;
+    color: #cbd5e1 !important;
+}
+
+.tab-button:not(.active):hover {
+    background-color: #475569 !important;
+    color: #e2e8f0 !important;
+}
+
+/* ========== FILTROS ========== */
+.filter-button {
+    background-color: #64748b !important;
+    color: #f8fafc !important;
+    border: 2px solid #475569 !important;
+    font-weight: 800;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.filter-button:hover {
+    background-color: #475569 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.filter-button.active {
+    background-color: #16a34a !important;
+    border-color: #15803d !important;
+    box-shadow: 0 4px 8px rgba(22, 163, 74, 0.4);
+}
+
+/* ========== CHECKBOX LIST ========== */
+.checkbox-list {
+    background-color: #e2e8f0 !important;
+    border: 2px solid #94a3b8 !important;
+    border-radius: 0.5rem;
+}
+
+.checkbox-item {
+    border-bottom: 2px solid #cbd5e1;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.2s;
+}
+
+.checkbox-item:hover {
+    background-color: #cbd5e1;
+}
+
+.checkbox-item.selected {
+    background-color: rgba(22, 163, 74, 0.1);
+    border-left: 4px solid #16a34a;
+}
+
+/* ========== MODAL ========== */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: #cbd5e1 !important;
+    border: 2px solid #94a3b8 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border-bottom: 2px solid #16a34a;
+    color: white;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .justificaciones-page {
+        padding: 1rem;
+    }
+    .justificacion-card,
+    .batch-card {
+        padding: 1rem;
+    }
+    .justificacion-card-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+/* src/styles/asistencia/student/justificacion/Justificacion.css */
+
+/* Estilos para badges de estado */
+.badge-aprobado {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 2px solid #16a34a;
+  box-shadow: 0 2px 4px rgba(22, 163, 74, 0.3);
+}
+
+.badge-rechazada {
+  background-color: #fee2e2;
+  color: #7f1d1d;
+  border: 2px solid #dc2626;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+}
+
+.badge-pendiente {
+  background-color: #fef3c7;
+  color: #a16207;
+  border: 2px solid #ca8a04;
+  box-shadow: 0 2px 4px rgba(202, 138, 4, 0.3);
+}
+
+.badge-revisado {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 2px solid #2563eb;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.badge-fuera-plazo {
+  background-color: #fef3c7;
+  color: #a16207;
+  border: 2px solid #ca8a04;
+}
+
+/* Animaciones para tarjetas */
+.justificacion-card-header {
+  transition: all 0.3s ease;
+}
+
+/* Estilos para estados en detalles */
+.status-approved {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.status-rejected {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.status-pending {
+  color: #ca8a04;
+  font-weight: 700;
+}
+
+.status-reviewed {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .justificacion-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .badge-aprobado,
+  .badge-rechazada,
+  .badge-pendiente,
+  .badge-revisado,
+  .badge-fuera-plazo {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Loading states */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover effects para botones */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Estilos para el modal de detalles */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Scrollbar personalizado */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

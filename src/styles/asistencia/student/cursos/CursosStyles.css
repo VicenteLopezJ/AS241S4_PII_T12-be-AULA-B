@@ -1,0 +1,134 @@
+
+
+.cursos-page {
+    background-color: #1f2937; 
+    min-height: 100vh;
+    padding: 2rem;
+    color: #f8fafc; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== TARJETAS DE MÉTRICAS ========== */
+.card-total-cursos {
+    background: linear-gradient(135deg, #475569 0%, #334155 100%);
+    border: 2px solid #64748b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-total-creditos {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 4px 8px rgba(124, 58, 237, 0.3);
+}
+
+.card-asistencia-promedio {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border: 2px solid #22c55e;
+    box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3);
+}
+
+.card-cursos-criticos {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    border: 2px solid #ef4444;
+    box-shadow: 0 4px 8px rgba(220, 38, 38, 0.4);
+}
+
+/* ========== ESTADOS DE TARJETAS DE CURSO ========== */
+.card-optimo {
+    border: 2px solid #16a34a;
+    border-top: 4px solid #16a34a;
+    background-color: #1e293b;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
+}
+
+.card-alerta {
+    border: 2px solid #ca8a04;
+    border-top: 4px solid #ca8a04;
+    background-color: #1e293b;
+    box-shadow: 0 4px 12px rgba(202, 138, 4, 0.2);
+}
+
+.card-critico {
+    border: 2px solid #dc2626;
+    border-top: 4px solid #dc2626;
+    background-color: #1e293b;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+/* ========== BARRAS DE PROGRESO ========== */
+.bg-bar-optimo {
+    background: linear-gradient(90deg, #16a34a 0%, #15803d 100%);
+    box-shadow: 0 2px 4px rgba(22, 163, 74, 0.3);
+}
+
+.bg-bar-alerta {
+    background: linear-gradient(90deg, #ca8a04 0%, #a16207 100%);
+    box-shadow: 0 2px 4px rgba(202, 138, 4, 0.3);
+}
+
+.bg-bar-critico {
+    background: linear-gradient(90deg, #dc2626 0%, #b91c1c 100%);
+    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+}
+
+/* ========== BADGES DE ESTADO ========== */
+.badge-optimo {
+    background-color: #16a34a;
+    border: 2px solid #15803d;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(22, 163, 74, 0.4);
+}
+
+.badge-alerta {
+    background-color: #ca8a04;
+    border: 2px solid #a16207;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(202, 138, 4, 0.4);
+}
+
+.badge-critico {
+    background-color: #dc2626;
+    border: 2px solid #b91c1c;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.4);
+}
+
+
+.footer-alert-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    padding-bottom: 80px; 
+}
+
+@media (min-width: 768px) {
+    .footer-alert-wrapper {
+        padding-bottom: 0; 
+    }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .cursos-page {
+        padding: 1rem;
+        padding-bottom: 200px; 
+    }
+    
+    .metric-grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 640px) {
+    .cursos-page {
+        padding: 0.75rem;
+    }
+}

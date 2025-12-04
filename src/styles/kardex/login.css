@@ -1,0 +1,99 @@
+/* Fondo */
+.login-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Círculos neón animados */
+.neon-circle, .neon-circle2 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(59,130,246,0.7), transparent);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 6s infinite ease-in-out;
+}
+.neon-circle2 {
+  right: -100px;
+  bottom: -80px;
+  background: radial-gradient(circle, rgba(34,197,94,0.7), transparent);
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Tarjeta */
+.login-card {
+  background: #1e293b;
+  padding: 2.5rem;
+  border-radius: 18px;
+  width: 380px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Títulos */
+.title {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  color: #cbd5e1;
+  margin-bottom: 1.8rem;
+}
+
+/* Inputs */
+.input-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+.input-group label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 6px;
+  background: #334155;
+  color: #fff;
+}
+
+/* Botón */
+.neon-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  box-shadow: 0 0 10px #3b82f6, 0 0 20px #06b6d4;
+  cursor: pointer;
+  transition: transform .2s;
+}
+.neon-btn:hover {
+  transform: scale(1.03);
+}
+
+/* Error */
+.error-msg {
+  color: #f87171;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

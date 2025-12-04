@@ -1,0 +1,309 @@
+/* costCenterPage.css - Diseño oscuro con modal borroso */
+
+.cost-center-page-container {
+  padding: 20px;
+  background: #1A202C;
+  min-height: 100vh;
+  color: #E2E8F0;
+}
+
+/* Header */
+.cost-center-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #4A5568;
+}
+
+.cost-center-page-title-section {
+  flex: 1;
+}
+
+.cost-center-page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F7FAFC;
+  margin: 0 0 8px 0;
+}
+
+.cost-center-page-subtitle {
+  font-size: 16px;
+  color: #A0AEC0;
+  margin: 0;
+}
+
+.cost-center-page-create-btn {
+  background: #4299E1;
+  color: #F7FAFC;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.cost-center-page-create-btn:hover {
+  background: #3182CE;
+  transform: translateY(-1px);
+}
+
+/* Sección de formulario */
+.cost-center-form-section {
+  background: #2D3748;
+  border-radius: 8px;
+  border: 1px solid #4A5568;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cost-center-form-header {
+  padding: 20px 24px 0;
+  margin-bottom: 0;
+}
+
+.cost-center-form-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #F7FAFC;
+  margin: 0;
+}
+
+/* Sección de lista */
+.cost-center-list-section {
+  background: #2D3748;
+  border-radius: 8px;
+  border: 1px solid #4A5568;
+  overflow: hidden;
+}
+
+/* Modal Overlay con fondo borroso */
+.cost-center-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 32, 44, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.cost-center-modal-content {
+  background: #2D3748;
+  border-radius: 12px;
+  border: 1px solid #4A5568;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: cost-center-modal-appear 0.3s ease-out;
+}
+
+@keyframes cost-center-modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Modal Header */
+.cost-center-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0;
+  margin-bottom: 20px;
+}
+
+.cost-center-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #F7FAFC;
+  margin: 0;
+}
+
+.cost-center-modal-close {
+  background: none;
+  border: none;
+  color: #A0AEC0;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cost-center-modal-close:hover {
+  background: #4A5568;
+  color: #F7FAFC;
+}
+
+/* Modal Body */
+.cost-center-modal-body {
+  padding: 0 24px;
+}
+
+.cost-center-detail-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.cost-center-detail-label {
+  font-weight: 600;
+  color: #CBD5E0;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cost-center-detail-value {
+  color: #F7FAFC;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.cost-center-detail-status {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  width: fit-content;
+}
+
+.cost-center-status-active {
+  background: rgba(72, 187, 120, 0.2);
+  color: #9AE6B4;
+  border: 1px solid #48BB78;
+}
+
+.cost-center-status-inactive {
+  background: rgba(245, 101, 101, 0.2);
+  color: #FEB2B2;
+  border: 1px solid #F56565;
+}
+
+/* Modal Footer */
+.cost-center-modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 20px 24px 24px;
+  border-top: 1px solid #4A5568;
+  margin-top: 8px;
+}
+
+.cost-center-modal-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+.cost-center-modal-btn-cancel {
+  background: #718096;
+  color: #F7FAFC;
+}
+
+.cost-center-modal-btn-cancel:hover {
+  background: #4A5568;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cost-center-page-container {
+    padding: 16px;
+  }
+
+  .cost-center-page-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .cost-center-page-create-btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cost-center-modal-overlay {
+    padding: 16px;
+  }
+
+  .cost-center-modal-content {
+    max-width: 100%;
+  }
+
+  .cost-center-modal-header,
+  .cost-center-modal-body,
+  .cost-center-modal-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cost-center-modal-footer {
+    flex-direction: column;
+  }
+
+  .cost-center-modal-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cost-center-page-title {
+    font-size: 24px;
+  }
+
+  .cost-center-page-subtitle {
+    font-size: 14px;
+  }
+
+  .cost-center-modal-title {
+    font-size: 18px;
+  }
+}
+
+/* Scrollbar personalizado para el modal */
+.cost-center-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cost-center-modal-content::-webkit-scrollbar-track {
+  background: #2D3748;
+  border-radius: 3px;
+}
+
+.cost-center-modal-content::-webkit-scrollbar-thumb {
+  background: #4A5568;
+  border-radius: 3px;
+}
+
+.cost-center-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
